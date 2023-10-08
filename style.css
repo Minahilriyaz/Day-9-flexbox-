@@ -1,0 +1,147 @@
+/***************** Flexbox *****************/
+/*one dimensional means elements ko row aur column ker sakhtay hai and space control bhi ker sakhtay hai
+and help to responsive*/
+
+
+/************* Flex Model ************/
+/* Aik main-axis aur second cross-axis yeh actually nazar nahi atay kud imagine kerna hota hai
+flex model basically axis samjhata hai row hai tu vertical wala main-axis aur column hai tu horizental wala cross axis jab inn ki direction row ki form mai hungi*/
+
+
+/***************** Display Flex **********************/
+/* flex contain ker raha hota hai sarey elements ko limit kay ander ker dayta hai woh overflow nahi ker
+sakhtay unhay apnay parent container kay andar hi rehna hota hai by default flex ki direction row rehti hai*/
+
+
+/****************Flex Direction ***********************/
+/*flex direction batata hai flex items ko konsay along axis aur direction mai send kia jye ga*/
+/*row mai horizontal line ko main-axis aur vertical line ko cross-axis*/
+/*column mai verticall ko main-axis aur horizontal ko cross-axis bolay gay*/
+/*flex-direction mai hum different values set ker sakhtay hai*/
+/* Example*/
+/*flex-direction: row;
+flex-direction: row-reverse;
+/*jab hum row ko set kertay hai tu humarah main-axis left say right ki tarf hun ga*/
+/*jab hum row-reserve kertay hai tu humarah main-axis ka wahi process hoga but iss kay andar different
+hoga kay yeh right to left ki tarf jye ga.*/
+/* Example*/
+flex-direction: column;
+flex-direction: column-reverse;
+/*aghir column hai tu humarah main-axis top to bottom hoga
+aghir column-reserve ho ga tu cross-axis bottom to top hoga*/
+
+
+/******************* justify-content ****************/
+/*justify content ka kaam hota hai browser ko batana kay screen ki space kis tareqay say distributes ho gi
+along main-axis kay space ko control kernay kay liye hum justify content ka use kertay hai*/
+ /*Example*/
+justify-content: flex-start;
+/*means main-axis ka start main-axis vertical bhi aur horizonatal bhi ho sakhta hai per uss say pehlay
+humay calculated kerna ho ga kay humarah main-axis kis direction mai ja raha hai.*/
+justify-content: flex-end;
+/*aghir humarah main-axis left to right ja raha hai tu humarah left start hoga aur right wala end hoga*/
+justify-content: center;
+/*main-axis kay along center mai ker sakhtay hai*/
+justify-content: space-between;
+ /*jitni bhi extra space ho gi main-axis kay along means left to right space between mai chali jye gi
+otherwise extra space nahi hai tu middle mai space show nahi hun gi*/
+justify-content: space-around;
+/*iss tarah space-around bhi hota hai kay jitni space middle mai ho gi uss ki half space left aur right set ho jye gi
+middle space aur left aur right wali space equal nahi hun gi*/
+justify-content: space-evenly;
+/*aghir hum chatay hai humari left aur right aur middle ki space equal hun uss kay liye hum iss ko use kertay hai*/
+/*inn options say hum mai-axis content aur uss kay around wali space ko control ker sakhtay hai*/
+
+
+/******************** Flex Wrap *****************/
+/*aghir maray flex-items aik line say zyada space lay rahay hai tu aik line kay uper saray element ko set kernay ki jagah nahi milti tu unn element ko next line per move kerdo 
+wrap kernay ka matlab hai aik line mai jagha nahihai tu dosri line mai chalay jao tu multiples line mai mujhe apnay elements milay gay*/
+/*Example*/
+flex-wrap: nowrap;
+/*By default flex-wrap always no wrap hi rehta hai means hum apnay items ko aik hi same line mai rkhay gay next line mai nahi lay jye gay*/
+flex-wrap: wrap;
+/*flex-wrap kernay say humarah content wrap ho jye ga means aik line kay andar jitnay box fit hu sakhtay hai woh ho jye gay aur baqi next line mai chalay jye gay*/
+/*iss say element normally main-axis kay along wrap hotay hai*/
+flex-wrap: wrap-reverse;
+/*wrap-reverse cross-axis kay along direction ko reverse kerta hai*/
+
+
+/**************** Align Items ****************/
+/*iss say hum items ko distribute ker saktay hai along cross-axis*/
+/*Example*/
+align-items: flex-start;
+/*start kernay say element top ki tarf jye gay*/
+align-items: flex-end;
+/*end kernay say bottom ki tarf chalay jye gay*/
+/*aur element tab move karay gay jab between mai cross-axis kay along space ho aghir space nahi hai tu maray element namove karey gay
+aur nahi hum space ko control ya distributes ker pye gay*/
+align-items: center;
+/*iss say element cross-axis kay along center mai chalay jye gay*/
+align-items: baseline;
+/*aghir humarah pass different size kay box hai tu flex-item kay andar wala text aik line per available milay ga*/
+
+
+/**************** Align-Content *******************/
+/*yeh same justify-content walay ki tarah work kerta hai but different yeh hai kay yeh cross-axis kay along work kerta hai*/
+/*Example*/
+align-content: flex-start;
+/*top ki tarf jye gay elements*/
+align-content: flex-end;
+/*bottom ki tarf jye gay element*/
+align-content: center;
+/*element center mai chalay jye gay along cross-axis*/
+align-content: space-between;
+align-content: space-evenly;
+align-content: space-around;
+align-content: baseline;
+/*yeh sub ussi tarah work karey gay jesay justify-content mai ker rahay tha but itna farq hoga kay yeh cross-axis kay along work karey gay*/
+
+/************* Align Self **************/
+/*hum kisi individual item ko cross-axis kay along ker pye yeh align-item ki tarah behave kerta hai means saray kay saray flex-item kay liye hota
+align self individual items per work kerta hai*/
+align-self: flex-start;
+align-self: flex-end;
+align-self: center;
+align-self: baseline;
+
+/********** Flex-Sizing ***************/
+/*aghir maray container kay andar kuch extra space hai individually andar koi item avalaible hai tu apni marzi say uss space kay hisab say unn item ko grow aur
+ya phir kam space kay hisab say uss ko shrink bhi kerva sakhtay hai iss say items ko grow ker sakhtay hai.*/
+/*First Property*/
+flex-basis 
+/*yani humarah container kay andar maray item ka initially size kia hona chai main-size means aghir mera row element hai tu width aur column hai tu height ho ga*/
+/* Second Property*/
+flex-grow
+ /*yeh batata hai aghir flex-container kay andar koi space empty reh jati hai tu flex-item ka main-size kesay grow kerna chai By default flex-sizing ki value har item kay liye 
+ 1 kay equal hoti hai but hum chahay tu kud say bhi value increase aur decrese ker sakhtay hai.*/
+ /*Example*/
+ flex-grow: 3;
+ min-width: 4px;
+ max-width: 3px;
+/*next-Property*/
+flex-shrink
+/*Means humarah pass container mai zaroorat say kam space ho tu uss time per maray element kis tarah shrink kernay chai uss ko hum define kertay hai.*/
+/*********************** Flex-Shorthand ******************/
+/*humaray flex kay 4 shorthand hotay hai first wala flex-grow, second wala flex-shrink, aur third wala flex-basis kehlata hai*/
+/*Example*/
+flex-grow, flex-shrink, flex-basis
+flex: 2 2 100px;
+/*aghir 2 value di hai tu pehli flex-grow, aur second flex-basis kehllai gi*/
+/*Example*/
+flex:2 100px;
+/*aur aghir unitless value likhi hai tu flex-grow kehlai gi*/
+/*Example*/
+flex: 2;
+/*aghir unit kay saat hai tu flex-basis kehlai gi*/
+/*Example*/
+flex: 100px;
+
+
+
+
+
+
+
+
+
+
